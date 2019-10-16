@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SetupWizardDemo</string>
+    <string name="str_welcome">Welcome</string>
+
+    <string name="str_back">Backwards</string>
+    <string name="str_next">Next</string>
+    <string name="str_finish">Finish</string>
+
+    <string name="str_start">Get Start</string>
+    <string name="str_language">Language</string>
+    <string name="str_language_select">Language Select</string>
+    <string name="str_hint_account">1234</string>
+    <string name="str_hint_password">5678</string>
+    <string name="str_login">Login</string>
+
+</resources>

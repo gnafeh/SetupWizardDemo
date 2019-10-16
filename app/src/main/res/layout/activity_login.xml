@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="账号" />
+
+        <EditText
+            android:id="@+id/edittext_account"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="ooooooooo"
+            android:imeOptions="actionNext"
+            android:hint="@string/str_hint_account"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="密码" />
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="ooooooooo"
+            android:imeOptions="actionNext"
+            android:hint="@string/str_hint_password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_finish"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="800dp"
+            android:visibility="gone"
+            android:text="@string/str_finish" />
+    </LinearLayout>
+
+</LinearLayout>
