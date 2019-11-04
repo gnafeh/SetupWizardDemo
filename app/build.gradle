@@ -20,24 +20,17 @@ android {
 
     /**
      * apk rename
-     * 生成apk名形如： cqq-v1.0-1-release.apk
+     * 鐢熸垚apk鍚嶅舰濡傦細 com.example.settingsdemo-v1.0-1-release.apk
      */
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-
-                // like: com.android.cmm.cqq-v1.0-1-release.apk
-                outputFileName = defaultConfig.applicationId + "-v" + defaultConfig.versionName + "-" +
-                        defaultConfig.versionCode + "-" + output.baseName + ".apk"
-
-                // like: cqq-v1.0-1-release.apk
-//                outputFileName = defaultConfig.applicationId.subSequence(
-//                        defaultConfig.applicationId.lastIndexOf(".") + 1,
-//                        defaultConfig.applicationId.length()) + "-v" + defaultConfig.versionName + "-" +
-//                        defaultConfig.versionCode + "-" + output.baseName + ".apk"
-            }
+            def outputDir = new File("${project.projectDir.absolutePath}/${variant.buildType.name}")
+            variant.packageApplicationProvider.get().outputDirectory = new File("$outputDir")
+            // like: com.example.settingsdemo-v1.0-1-release.apk
+            outputFileName= variant.applicationId + "-v" + variant.versionName + "-" +
+                    variant.versionCode + "-" + variant.buildType.name + ".apk"
         }
+
     }
 
 }
